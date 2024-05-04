@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
+using namespace std;
 
-using ll = long long;
+#define endl '\n'
+#define ll long long
 
 int gcd (int a, int b) {
 	return b==0 ? a : gcd(b,a%b);
