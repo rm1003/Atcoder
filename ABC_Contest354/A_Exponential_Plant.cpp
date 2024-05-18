@@ -12,20 +12,18 @@ int lcm (int a, int b) {
 	return a/gcd(a,b)*b;
 }
 
-void solve () {
-
-}
-
 int main () {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int t;
-    cin >> t;
-
-    while (t--) {
-        solve();
+	int H, p, i;
+    cin >> H;
+    p = 1;
+    i = 1;
+    for (i; p <= H; i++){
+        p = p * 2 + 1;
     }
+    cout << i << endl;
 
 	return 0;
 }
