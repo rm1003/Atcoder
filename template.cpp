@@ -4,13 +4,10 @@ using namespace std;
 #define endl '\n'
 #define ll long long
 
-int gcd (int a, int b) {
-	return b==0 ? a : gcd(b,a%b);
-}
-
-int lcm (int a, int b) {
-	return a/gcd(a,b)*b;
-}
+// Maximo divisor comum
+int gcd (int a, int b) {return b==0 ? a : gcd(b,a%b);}
+// Minimo multiplo comum
+int lcm (int a, int b) {return a/gcd(a,b)*b;}
 
 void solve () {
 
