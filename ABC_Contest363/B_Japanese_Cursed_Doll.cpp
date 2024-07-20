@@ -8,23 +8,23 @@ using namespace std;
 int gcd (int a, int b) {return b==0 ? a : gcd(b,a%b);}
 // Minimo multiplo comum
 int lcm (int a, int b) {return a/gcd(a,b)*b;}
-// Fatorial
-int fat (int a) {return a == 1 ? 1 : a * fat(a - 1);}
-
-void solve () {
-
-}
 
 int main () {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int t;
-    cin >> t;
-
-    while (t--) {
-        solve();
+    int N, T, P;
+    int x;
+    cin >> N >> T >> P;
+    vector<int> v(N);
+    for (int i = 0; i < N; i++) {
+        cin >> x;
+        v.push_back(x);
     }
+
+    sort(v.rbegin(), v.rend());
+
+    cout << (T < v[P - 1] ? 0 : (T - v[P - 1])) << endl;
 
 	return 0;
 }
