@@ -16,16 +16,28 @@ void solve () {
 
 }
 
+int m[110][110];
+
 int main () {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int t;
-    cin >> t;
-
-    while (t--) {
-        solve();
+	int n; cin >> n;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            cin >> m[i][j];
+        }
     }
+    int ind = 1;
+    for (int i = 1; i <= n; i++) {
+        if (ind >= i) {
+            ind = m[ind][i];
+        } else {
+            ind = m[i][ind];
+        }
+    }
+    cout << ind << endl;
+    
 
 	return 0;
 }

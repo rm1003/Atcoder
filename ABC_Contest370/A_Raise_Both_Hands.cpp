@@ -20,12 +20,11 @@ int main () {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	int t;
-    cin >> t;
-
-    while (t--) {
-        solve();
-    }
+	int l, r; cin >> l >> r;
+    if ((l == 1 && r == 1) || (l == 0 && r == 0)) cout << "Invalid" << endl;
+    else if (l == 1) cout << "Yes" << endl;
+    else cout << "No" << endl;
+    
 
 	return 0;
 }
